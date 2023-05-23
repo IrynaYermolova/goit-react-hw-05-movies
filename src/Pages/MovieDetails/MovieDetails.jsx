@@ -24,19 +24,6 @@ export const MovieDetails = () => {
   }, [id]);
   
 
-//   useEffect(() => {
-//   console.log('Fetching movie with id:', id);
-//   Promise.resolve(fetchMovieById(id))
-//     .then((response) => {
-//       const data = response.data;
-//       setMovieId(data);
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// }, [id]);
-
-
   if (!movieId.length) {
     return <Loader />;
   }
