@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { fetchPopularMovies } from '../../FetchApi/FetchApi';
 import MoviesList from 'components/MoviesList/MoviesList';
 
-   const Home=() => {
+    const Home=() => {
 
    const [movies, setMovies] = useState([]);
        
@@ -28,6 +28,6 @@ import MoviesList from 'components/MoviesList/MoviesList';
             <Outlet />
         </div>
     )
-} 
+}
 
 export default Home;
