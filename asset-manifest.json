@@ -1,13 +1,27 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.e138eff4.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.8330dfc3.js",
+    "static/js/58.d2c79546.chunk.js": "/goit-react-hw-05-movies/static/js/58.d2c79546.chunk.js",
+    "static/js/765.2c4d2f1f.chunk.js": "/goit-react-hw-05-movies/static/js/765.2c4d2f1f.chunk.js",
+    "static/js/834.c1e2ed52.chunk.js": "/goit-react-hw-05-movies/static/js/834.c1e2ed52.chunk.js",
+    "static/js/247.953094ee.chunk.js": "/goit-react-hw-05-movies/static/js/247.953094ee.chunk.js",
+    "static/js/186.7ee5d391.chunk.js": "/goit-react-hw-05-movies/static/js/186.7ee5d391.chunk.js",
+    "static/js/10.dca5a2f6.chunk.js": "/goit-react-hw-05-movies/static/js/10.dca5a2f6.chunk.js",
+    "static/js/279.2c004ea1.chunk.js": "/goit-react-hw-05-movies/static/js/279.2c004ea1.chunk.js",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.7acaea2f.css.map": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css.map",
-    "main.e138eff4.js.map": "/goit-react-hw-05-movies/static/js/main.e138eff4.js.map"
+    "main.8330dfc3.js.map": "/goit-react-hw-05-movies/static/js/main.8330dfc3.js.map",
+    "58.d2c79546.chunk.js.map": "/goit-react-hw-05-movies/static/js/58.d2c79546.chunk.js.map",
+    "765.2c4d2f1f.chunk.js.map": "/goit-react-hw-05-movies/static/js/765.2c4d2f1f.chunk.js.map",
+    "834.c1e2ed52.chunk.js.map": "/goit-react-hw-05-movies/static/js/834.c1e2ed52.chunk.js.map",
+    "247.953094ee.chunk.js.map": "/goit-react-hw-05-movies/static/js/247.953094ee.chunk.js.map",
+    "186.7ee5d391.chunk.js.map": "/goit-react-hw-05-movies/static/js/186.7ee5d391.chunk.js.map",
+    "10.dca5a2f6.chunk.js.map": "/goit-react-hw-05-movies/static/js/10.dca5a2f6.chunk.js.map",
+    "279.2c004ea1.chunk.js.map": "/goit-react-hw-05-movies/static/js/279.2c004ea1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.e138eff4.js"
+    "static/js/main.8330dfc3.js"
   ]
 }
