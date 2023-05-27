@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { fetchPopularMovies } from '../../FetchApi/FetchApi';
 import MoviesList from 'components/MoviesList/MoviesList';
+import css from '../Home/Home.module.css';
 
     const Home=() => {
 
@@ -21,12 +22,13 @@ import MoviesList from 'components/MoviesList/MoviesList';
                .catch(error => new Error(error));
        };
        
-    return ( 
-        <div>
-            <h1>Trending Today</h1>
+        return ( 
+        
+        <div className={css.container}>
+            <h1 className={css.title}>-Trending Today-</h1>
             <MoviesList movies={movies} />
             <Outlet />
-        </div>
+                </div>
     )
 }
 

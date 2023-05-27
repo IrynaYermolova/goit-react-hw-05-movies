@@ -1,16 +1,3 @@
-
-
-// import { Link } from 'react-router-dom';
-
-// function BackLink ({ to, children }) {
-//   return (
-//     <Link to={to} >
-//       {children}
-//     </Link>
-//   );
-// };
-// export default BackLink;
-
 import MoviesList from 'components/MoviesList/MoviesList';
 import { SearchForm } from '../../components/SearchForm/SearchForm';
 import { useEffect, useState } from 'react';
@@ -20,10 +7,10 @@ import { useSearchParams } from 'react-router-dom';
 
  const Movies = () => {
 
-    const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [movies, setMovies] = useState([]);
   const movieName = searchParams.get('query');
-
+  
   useEffect(() => {
     if (!movieName) return;
    fetchSearchMovie(movieName).then(({ results }) => {
@@ -34,7 +21,8 @@ import { useSearchParams } from 'react-router-dom';
     const handleFormSubmit = value => {
       
     setSearchParams(value !== '' ? { query: value } : {});
-  };
+   };
+  
   return (
     <>
       <SearchForm onSubmit={handleFormSubmit} />

@@ -1,16 +1,17 @@
+
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Link } from "react-router-dom";
-
+import css from '../Header/Header.module.css'
 
  const Header = () => {
 
   return (
     <>
-      <header>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/movies">Movies</Link>
+      <header className={css.header}>
+        <nav className={css.nav}>
+          <Link className={css.headerLink} to="/">Home</Link>
+          <Link className={css.headerLink} to="/movies">Movies</Link>
         </nav>
       </header>
 

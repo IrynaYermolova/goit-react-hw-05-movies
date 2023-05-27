@@ -1,20 +1,22 @@
 
-import { useEffect, useState } from 'react';
-// import {fetchMovieById } from '../../FetchApi/FetchApi'
+import { useEffect, useState} from 'react';
+
 import { Link,Outlet,useParams,useLocation} from 'react-router-dom';
-// import Loader from 'components/Loader/loader';
+import Loader from 'components/Loader/loader';
 import { fetchMovieById } from '../../FetchApi/FetchApi';
+// import  BackLink  from 'components/BackLink/BackLink';
 // import { Suspense } from 'react';
+import css from '../MovieDetails/MovieDetails.module.css'
 
-//  const { title, tagline, poster_path, overview, genres,release_date } = movie;
- 
 
-   const MovieDetails = ({ movies}) => {
-    const [movie, setMovie] = useState([]);
+
+   const MovieDetails = () => {
+    const [movie, setMovie] = useState(null);
     const { movieId } = useParams();
      const location = useLocation();
-     
-     const { title, vote_average, release_date, genres, poster_path } = movie;
+    //  const backLink = location.state?.from ?? '/';
+    
+     const backLink= location.state?.from || '/';
      
     useEffect(() => {
       console.log('Fetching  id:', movieId);
@@ -28,50 +30,47 @@ import { fetchMovieById } from '../../FetchApi/FetchApi';
         });
     }, [movieId]);
      
-  //  useEffect(() => {
-  //   fetchMovieById(movieId).then(data => setMovie(data));
-  // }, [movieId]);
  
-    // if (!movieId) {
-    //   return <Loader />;
-    // }
+    if (!movie) {
+      return <p>{<Loader/>}</p>;
+    }
+     const { title, vote_average, release_date, genres, poster_path } = movie;
     
-    
-     const backLinkHref = location.state?.from ?? '/';
+   
     return (
     <>
-    <Link to={backLinkHref} >
+        <Link className={css.backLink} to={backLink}>
         Go Back
       </Link>
-        <div>
-          <img src = {`https://image.tmdb.org/t/p/w300${poster_path}`}
+        <div className={css.movie}>
+          <img  className={css.poster} src={`https://image.tmdb.org/t/p/w300${poster_path}`}
             alt="poster"
           />
-        <div >
-          <div>
-            <h2>
+        <div className={css.movieInfo}>
+          <div className={css.mainInfo}>
+            <h2 className={css.mainTitle}>
               {title} ({new Date(release_date).getFullYear()})
             </h2>
-            <p>User Score: {Math.round(vote_average * 10)} %</p>
-            <h3>Overview</h3>
-            <p>{movie.overview}</p>
-            <h3>Genres</h3>
+            <p className={css.mainText}>User Score: {Math.round(vote_average * 10)} %</p>
+            <h3 className={css.mainTitle}>Overview</h3>
+            <p className={css.mainText}>{movie.overview}</p>
+            <h3 className={css.mainTitle}>Genres</h3>
             {genres && movie.genres.map(genre => genre.name).join(', ')}
           </div>
-          <div >
-            <h3>Additional information</h3>
-            <ul >
+          <div  className={css.extraInfo}>
+            <h3 className={css.mainTitle}>Additional information</h3>
+            <ul className={css.list}>
               <li>
-                <Link
+                <Link  className={css.btn}
                   to="cast"
-                  state={{ from: backLinkHref }} >
+                  state={{ from: backLink }} >
                   Cast
                 </Link>
               </li>
               <li>
-                <Link
+                <Link className={css.btn}
                   to="reviews"
-                  state={{ from: backLinkHref }}
+                  state={{ from: backLink }}
                   
                 >
                   Reviews

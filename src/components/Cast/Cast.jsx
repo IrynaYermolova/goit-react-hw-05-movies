@@ -3,8 +3,8 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {fetchMovieCredits } from '../../FetchApi/FetchApi';
+import css from '../Cast/Cast.module.css'
 
-// import css from './Cast.module.css';
 
  function Cast() {
   const { movieId } = useParams();
@@ -19,11 +19,11 @@ import {fetchMovieCredits } from '../../FetchApi/FetchApi';
 
   return (
     <>
-      <p >Actors</p>
-      <ul >
+      <p className={css.mainPar}>Actors</p>
+      <ul className={css.list}>
         {movieCast.map(actor => (
           <li key={actor.id}>
-            <img
+            <img className={css.portrets}
               
               src={
                 actor.profile_path
@@ -33,8 +33,8 @@ import {fetchMovieCredits } from '../../FetchApi/FetchApi';
               alt=""
             />
             <div>
-              <p>{actor.name}</p>
-              <p>Character: {actor.character}</p>
+              <p className={css.mainText}>{actor.name}</p>
+              <p className={css.mainText}>Character: {actor.character}</p>
             </div>
           </li>
         ))}
