@@ -5,23 +5,14 @@
 }
 
 .mainText {
-  /* color: rgb(59, 8, 8); */
   color: #4146a7;
 }
 .mainPar {
   color: rgb(59, 8, 8);
   font-weight: bold;
   text-align: center;
-  /* font-weight: bold; */
   font-size: 24px;
 }
-/* .listRew {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0px;
-  padding-left: 60px;
-  list-style: none;
-} */
 
 .textAutor {
   color: rgb(59, 8, 8);

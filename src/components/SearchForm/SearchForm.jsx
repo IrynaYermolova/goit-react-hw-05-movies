@@ -1,4 +1,4 @@
-import css from '../SearchForm/SearchForm.module.css'
+import css from '../SearchForm/SearchForm.module.css';
 import React, { useState } from 'react';
 
 export const SearchForm = ({ onSubmit }) => {

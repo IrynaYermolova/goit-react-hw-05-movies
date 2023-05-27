@@ -56,7 +56,6 @@ ul {
   flex-wrap: wrap;
   margin-left: 60px;
   gap: 30px;
-  /* padding-left: 20px; */
 }
 
 .poster {
@@ -91,7 +90,6 @@ ul {
   padding: 15px;
   text-decoration: none;
   text-align: center;
-  /* color: #65005e; */
   color: #20123ec2;
   border: solid 2px rgb(229, 242, 54);
   border-radius: 10px;
